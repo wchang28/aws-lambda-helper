@@ -1,0 +1,22 @@
+{
+  "name": "aws-lambda-helper",
+  "version": "0.0.1",
+  "description": "AWS Lambda Helper",
+  "main": "./js/index.js",
+  "typings": "./js/index.d.ts",
+  "scripts": {},
+  "keywords": [
+    "AWS",
+    "Lambda"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wchang28/aws-lambda-helper.git"
+  },
+  "author": "Wen Chang",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^8.0.31",
+    "aws-sdk": "^2.123.0"
+  }
+}

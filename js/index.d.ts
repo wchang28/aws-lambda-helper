@@ -6,4 +6,4 @@ export declare class AWSLambdaInvoker {
 export declare type AWSLambdaFunctionCallback<R> = (err: any, result?: R) => void;
 export declare type AWSLambdaFunction<E, C, R> = (event: E, context: C, callback: AWSLambdaFunctionCallback<R>) => void;
 export declare type AWSLambdaFunctionHandler<E, C, R> = (event: E, context: C) => Promise<R>;
-export declare function AWSLambdaFunction<E, C, R>(handler: AWSLambdaFunctionHandler<E, C, R>): AWSLambdaFunction<E, C, R>;
+export declare function factory<E, C, R>(handler: AWSLambdaFunctionHandler<E, C, R>): AWSLambdaFunction<E, C, R>;

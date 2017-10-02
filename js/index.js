@@ -34,7 +34,7 @@ var AWSLambdaInvoker = /** @class */ (function () {
     return AWSLambdaInvoker;
 }());
 exports.AWSLambdaInvoker = AWSLambdaInvoker;
-function AWSLambdaFunction(handler) {
+function factory(handler) {
     return function (event, context, callback) {
         handler(event, context)
             .then(function (result) {
@@ -44,5 +44,5 @@ function AWSLambdaFunction(handler) {
         });
     };
 }
-exports.AWSLambdaFunction = AWSLambdaFunction;
+exports.factory = factory;
 //# sourceMappingURL=index.js.map

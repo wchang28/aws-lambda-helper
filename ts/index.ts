@@ -34,7 +34,7 @@ export type AWSLambdaFunctionCallback<R> = (err: any, result?: R) => void;
 export type AWSLambdaFunction<E, C, R> = (event: E, context: C, callback: AWSLambdaFunctionCallback<R>) => void;
 export type AWSLambdaFunctionHandler<E, C, R> = (event: E, context: C) => Promise<R>;
 
-export function factory<E, C, R>(handler: AWSLambdaFunctionHandler<E, C, R>) : AWSLambdaFunction<E, C, R> {
+export function lambdaFactory<E, C, R>(handler: AWSLambdaFunctionHandler<E, C, R>) : AWSLambdaFunction<E, C, R> {
     return (event: E, context: C, callback: AWSLambdaFunctionCallback<R>) => {
         handler(event, context)
         .then((result: R) => {
